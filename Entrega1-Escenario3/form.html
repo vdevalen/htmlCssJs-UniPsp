@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Sistema Web</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>Portal Sistema Web</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Agregar Tarea</h2>
+            <form id="task-form">
+                <label for="actividad">Actividad:</label>
+                <input type="text" id="actividad" name="actividad" required>
+                
+                <label for="tiempo">Tiempo (minutos):</label>
+                <input type="number" id="tiempo" name="tiempo" required>
+                
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <button type="submit">Agregar Tarea</button>
+            </form>
+        </section>
+        
+        <section>
+            <h2>Lista de Tareas</h2>
+            <ul id="task-list"></ul>
+        </section>
+
+        <section>
+            <h2>Gráficos de Tareas</h2>
+            <div id="chart-container">
+                <canvas id="task-chart"></canvas>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="form.js" defer></script>
+</body>
+</html>
